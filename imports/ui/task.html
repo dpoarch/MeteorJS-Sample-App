@@ -1,0 +1,26 @@
+<template name="task">
+    {{#if isOwner}}
+      <li class="other">
+        <div class="avatar"><img src="https://i.imgur.com/DY6gND0.png" draggable="false"/></div>
+        <div class="msg">
+          <p>{{username}}</p>
+          <p>{{text}}</p>
+          <time>{{createdAt}}</time>
+        </div>
+      </li>
+    {{else}}
+      <li class="self">
+        <div class="avatar"><img src="https://i.imgur.com/HYcn9xO.png" draggable="false"/></div>
+        <div class="msg">
+          <p>{{username}}</p>
+          <p>{{text}}</p>
+          <p>Mejor otro día</p>
+          <time>{{createdAt}}</time>
+        </div>
+    </li>
+    {{/if}}
+
+    
+
+    
+</template>

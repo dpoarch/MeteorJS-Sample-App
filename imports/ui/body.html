@@ -1,0 +1,35 @@
+<body>
+  <div class="container">
+
+  
+  {{#if currentUser}}
+    <div class="menu">
+    <div class="back"><i class="fa fa-chevron-left"></i> <img src="https://i.imgur.com/DY6gND0.png" draggable="false"/></div>
+    <div class="name">{{> loginButtons}}</div>
+    <!-- <div class="last">18:09</div> -->
+    </div>
+
+    <ol class="chat">
+      {{#each tasks}}
+        {{> task}}
+      {{/each}}
+    </ol>
+    <form class="new-task">
+        <input type="text" class="textarea" name="text" placeholder="Type you messsage here!" /><div class="emojis"></div>
+    </form>
+
+  {{else}}
+    
+    <div id="main-login">
+    <h2>Messenger App</h2>
+    {{> loginButtons align="center"}}
+    </div>
+  {{/if}}
+
+  </div>
+
+
+</body>
+
+
+ 
